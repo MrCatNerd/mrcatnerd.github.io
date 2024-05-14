@@ -1,0 +1,146 @@
+/* I SUCK AT CSS */
+
+:root {
+	--font: "Lucida Console" , monospace;
+	--bgcolor: #1f1d2e;
+	--linkcolor: #3ea596;
+}
+
+/*-----------------------------------------------------------*/
+input {
+    height: inherit;
+    width: 680px;
+    background: #26233a;
+    color: #ebbcba;
+    font: "Cartograph CF";
+    font-weight: mono;
+    line-height: 1.8em;
+    box-shadow: 1px 1px 3px #000000;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    outline: none;
+    padding: 7px 14px;
+    font-size: 18;
+    grid-column: 1 / -1;
+    margin: 0px 0px 30px 0px;;
+}
+
+/* fancy background */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+/*
+	background-image: url('../background/bg.jpg');
+	background-repeat : no-repeat;
+*/
+    background: linear-gradient(-45deg, #191724, #181626, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+	/* background-color: #191724; */
+	/* background-size: cover; */
+}
+
+img {
+    width: 20em;
+    height: 20em;
+}
+.item img {
+    border-radius: 25px;
+    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#entrance h1{
+    text-decoration: underline;
+}
+
+@keyframes colorz {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes left_and_right {
+    0% {transform: translateX(-250px);}
+    50% {transform: translateX(250px);}
+    100% {transform: translateX(-250px);}
+}
+
+@keyframes sine-wave {
+    0% {transform: translateY(-25px);}
+    50% {transform: translateY(25px);}
+    100% {transform: translateY(-25px);}
+}
+
+#fancy_animation_thingy {
+    display: inline-block;
+    font-size: 1.5rem;
+    animation: colorz 5s infinite ease-in-out alternate, sine-wave 5s infinite ease-in-out alternate;
+}
+
+#entrance img {
+    animation: left_and_right 5s infinite ease-in-out alternate;
+    animation-delay: -1s;
+    margin-top: 2rem;
+}
+
+
+.everything {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ebbcba;
+    font-family: var(--font);
+    font-size: 1.5rem;
+}
+
+.item {
+	display: inline-block;
+	width: 90%;
+    text-align: center;
+	background-color: var(--bgcolor);
+	border-radius: 8px;
+	box-shadow: 2px 2px 8px #000000;
+    margin-bottom: 50px;
+}
+
+.box {
+	width: 750px;
+}
+
+ul {
+	padding-inline-start: 0;
+	list-style: none;
+    font-weight: bold;
+}
+
+a {
+	line-height: 2.4em;
+	font-family: var(--font);
+	color: var(--linkcolor);
+	text-decoration: none;
+	outline: none;
+	transition: .2s;
+}
+
+a:hover {
+	color: #9ccfd8;
+}
